@@ -88,7 +88,7 @@ class Client extends \SoapClient{
 				"Location" => $location,
 				"HttpStatus"			=> $http_status,
 				"Request"				=> $request,
-				"Response"				=> strlen($response) > 2000 ? substr($response, 0, 2000) . "..." : $response,
+				"Response"				=> $response,
 				"RequestTime"			=> curl_getinfo($ch, CURLINFO_TOTAL_TIME),
 				"RequestConnectTime"		=> curl_getinfo($ch, CURLINFO_CONNECT_TIME),
 				"Time"				=> microtime(true) - $start_time
